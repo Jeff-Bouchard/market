@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.cmd text eol=crlf
+testdata/** -text
+docs/canonical-wallet/** -text
+web/assets/vendor/** -text
+web/assets/ui/qrcode.js -text
+web/assets/ui/QRCODE-LICENSE.txt -text

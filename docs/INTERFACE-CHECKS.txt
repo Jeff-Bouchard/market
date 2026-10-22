@@ -1,0 +1,28 @@
+Interface verification — 2026-09-15
+
+PASS: Desktop and phone layouts visually inspected in Chromium.
+PASS: Phone document width equals its viewport width (no horizontal overflow).
+PASS: Callsign, selected style, greeting and emblem update; survive page reload.
+PASS: Name Keeper opens NVS with NS=seed1.emercoin.com,seed2.emercoin.com.
+PASS: Four real countdown phases: Gather, Align, Charge, Reveal.
+PASS: Copy and cash-out remain disabled during the countdown.
+PASS: Server-confirmed token unlock enables copy and cash-out.
+PASS: Token transfer to cash-out and server value quote.
+PASS: A second claim resets and completes the same sequence.
+PASS: Full-motion orbit animation is active; Calm motion disables it.
+PASS: Switching service pauses the countdown and animation; returning resumes it.
+PASS: No browser JavaScript errors observed.
+
+All activity used isolated local test state. No live payout or NVS registration.
+Backend tests and executable HTTP smoke tests cover the real ten-second gate.
+
+Fresh-claim update:
+PASS: Reload after release clears the displayed token and disables cash-out/copy.
+PASS: Starting after reload visibly begins at ten seconds.
+PASS: Same-session starts and release replay are covered by backend and executable tests.
+Node launcher override probe: the imported GOPATH Skycoin params package reports 20 / 6.
+PASS: After restart, local node health reports wallet and network policies 20 / 6; genesis identity matches NESS. No live payout sent.
+
+Direct exchange follow-up: final browser page shows 10000 NCH -> 1.000000 NESS; editing to 10001 shows 1.000100 NESS. Selected destination generates a local QR. Missing funding configuration produces a clear error without creating a deposit. Desktop exchange form visually inspected. No real transfers performed.
+
+2026-09-16 guided interface: verified three navigation destinations, full countdown, automatic token handoff to reward check, exact quote display, readable service-not-configured response, and expandable support details. An isolated interface fixture (no live wallets) verified deposit instructions, one prominent deposit QR, cancellation, and restored request display. Screenshot inspected. No live transaction was sent.

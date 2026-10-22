@@ -1,0 +1,1 @@
+These three unchanged golden fixtures are from skycoin/skycoin commit a5d2f6d2bb395ea0ef5b32264e7d5895833ed668 under src/api/integration/testdata. They are independent reference data for the portal tests. Public blockchain addresses in the fixtures are test inputs only; no funds are sent. See ../../docs/upstream-sources.json for source links and SHA256 hashes.

@@ -1,0 +1,22 @@
+/* These rules apply to the portal and the older exchange pages. */
+input[data-example]::placeholder,textarea[data-example]::placeholder{color:#92999f!important;opacity:1!important}
+.example-preview{color:#92999f!important}
+.wallet-pair{display:inline-flex!important;align-items:center;gap:14px;max-width:100%;padding:12px;margin:8px 0;border:1px solid #64746b;border-radius:6px;vertical-align:middle;background:#101a15;color:#eef6ef;font-size:1rem;line-height:1.5;white-space:normal;box-sizing:border-box}
+.wallet-pair[hidden]{display:none!important}
+.wallet-details{display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0}
+.wallet-details code{display:block;color:#eef6ef!important;overflow-wrap:anywhere;word-break:break-all;font:1rem/1.5 ui-monospace,monospace}
+.wallet-qr{display:block;flex-shrink:0;width:148px;height:148px;max-width:none;background:#fff;border:0;border-radius:0}
+.wallet-copy{margin:0!important;font-size:.875rem!important;line-height:1.5!important;padding:8px 12px!important;min-height:40px;cursor:pointer}
+.wallet-input-group{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #64746b;border-radius:6px;max-width:100%;box-sizing:border-box}
+.wallet-input-group>input{min-width:0;flex:1;width:100%;margin:0!important}
+.wallet-input-group>input.form-input{padding:14px!important;position:static!important}
+.wallet-field-preview{flex:0 0 148px;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:.875rem;line-height:1.4}
+.wallet-caption{text-align:center;color:#adb5bd;font-size:.875rem}
+input[data-wallet]:not(.wallet-ready){visibility:hidden!important}
+.form-group:has(.wallet-input-group)>.form-label{position:static!important;display:block;transform:none!important;padding:8px 0!important;font-size:1rem!important}
+.form-group:has([data-example]):not(:has(.wallet-input-group))>.form-label{position:static!important;display:block;transform:none!important;padding:8px 0!important;font-size:1rem!important}
+.form-input[data-example]{font-size:1rem!important}
+@media(max-width:540px){.wallet-pair{flex-direction:column;align-items:flex-start;gap:8px;width:100%}.wallet-input-group{flex-direction:column;align-items:stretch}.wallet-field-preview{flex-basis:auto;align-items:center}.wallet-pair .wallet-details{width:100%}.wallet-qr{width:148px;height:148px}}
+
+[data-wallet-text]:not(.wallet-text-ready){visibility:hidden!important}
+.wallet-text-preview{display:flex;flex-wrap:wrap;gap:8px;max-width:100%}

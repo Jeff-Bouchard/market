@@ -1,0 +1,78 @@
+/* The unified screen keeps the original dark palette and uses one action at a time. */
+body { background: #0d1018; }
+header { max-width: 1060px; margin-inline: auto; padding: 24px; }
+main { max-width: 820px; padding-inline: 24px; margin-inline: auto; }
+nav { margin-bottom: 24px; }
+.intro { margin: 36px 0 28px; padding: 0; }
+.intro h1 { margin-block: 12px; font-size: clamp(2.2rem, 6vw, 3.5rem); line-height: 1.12; }
+.intro p { max-width: 40rem; }
+.earning-paths { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin:0 0 28px; padding-block:20px; border-block:1px solid var(--line); }
+.earning-paths h2 { margin:0 0 6px; font-size:1.05rem; }
+.earning-paths p { margin:0; font-size:.9rem; line-height:1.6; color:var(--muted); }
+.form-surface, .slot { max-width: 100%; padding: clamp(20px, 4vw, 32px); }
+.form-surface h2 { margin-top: 0; font-size: 1.4rem; }
+.form-surface p { line-height: 1.65; }
+.form-surface details { margin-top: 20px; }
+.form-surface summary { cursor: pointer; color: var(--accent); line-height: 1.5; }
+.form-surface details input + button { margin-top: 12px; }
+.countdown-card { display: grid; grid-template-columns: 1fr auto; gap: 16px; }
+.countdown-card > :not(:first-child):not(.simple-countdown) { grid-column: 1 / -1; }
+.countdown-card .eyebrow { margin-top: 0; }
+.simple-countdown { display: flex; flex-direction: column; justify-content: center; align-items: center; min-width: 90px; color: var(--accent); }
+.simple-countdown strong { font-size: 3.5rem; font-variant-numeric: tabular-nums; }
+.simple-countdown span { font-size: .7rem; }
+#use-token:disabled { display: none; }
+#service-availability { font-size: .85rem; }
+#wallet-setup { margin-block: 0 24px; }
+#wallet-selected-row { margin-bottom: 0; }
+#quote-result > strong { font-size: 1.5rem; font-weight: 600; }
+.receiving-address { overflow-wrap: anywhere; }
+footer { margin-top: 40px; }
+.operation-list { padding:0; list-style:none; display:grid; gap:8px; margin-block:8px; font-size:.9rem; }
+.operation-list li { padding:5px 0; color:var(--muted); }
+.operation-list li::before { content:'○'; display:inline-block; width:1.6rem; color:var(--muted); }
+.operation-list li.complete::before { content:'✓'; color:var(--accent); }
+.operation-list .complete { border-color:var(--accent); color:var(--text); }
+.checkbox-row { display:flex; align-items:center; gap:12px; margin-block:16px; }
+.checkbox-row input { width:20px; min-width:20px; height:20px; margin:0; }
+.recovery-phrase { padding:16px; border:1px solid var(--line); font-size:1.1rem; word-spacing:.4em; user-select:all; }
+.foundation { max-width: 720px; margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
+.foundation summary { color: var(--accent); cursor: pointer; }
+.foundation p { color: var(--muted); line-height: 1.65; font-size: .85rem; }
+.more-tools { margin-left:auto; position:relative; align-self:center; }
+.more-tools summary { padding:12px 18px; font-size:.85rem; }
+.more-tools a { position:absolute; z-index:2; top:100%; right:0; width:max-content; background:var(--surface); border:1px solid var(--line); }
+button { min-height:48px; font-size:1rem; }
+input, textarea, select { font-size:1rem; }
+#wallet-create { min-width:200px; display:flex; justify-content:space-between; gap:28px; }
+#wallet-intro { color:var(--muted); max-width:37rem; }
+#wallet-setup .eyebrow { margin-top:0; font-size:.65rem; }
+#wallet-setup #wallet-options { font-size:.85rem; }
+#wallet-backup .technical-details, #restore-access, #wallet-selected-row { border-top:1px solid var(--line); padding-top:16px; }
+#wallet-backup .technical-details { font-size:.85rem; }
+#wallet-saved:not([hidden]) { display:block; }
+#wallet-save:has(+ #wallet-saved:not([hidden])) { background:transparent; color:var(--accent); }
+.field-help { font-size:.85rem; }
+.form-surface .field-help { margin-top:10px; }
+details summary { min-height:32px; }
+#quote-result details { font-size:.85rem; }
+#cash-destination { margin-top:0; }
+#cash-details { font-size:.9rem; }
+#wallet-status { font-size:.9rem; }
+nav .more-tools a[aria-current] { background:var(--surface); }
+@media (max-width: 540px) {
+  header { padding: 20px; }
+  main { padding-inline: 16px; }
+  header .network { display: none; }
+  nav { display: flex; gap: 4px; flex-wrap: wrap; }
+  nav a { padding: 10px 12px; font-size: .8rem; }
+  .intro { margin-top: 28px; }
+  .countdown-card { grid-template-columns: 1fr; }
+  .simple-countdown { grid-row: 2; }
+  .form-surface button { max-width: 100%; }
+  .intro h1 { font-size:2.5rem; }
+  .intro > p:last-child { font-size:1rem; }
+  .earning-paths { grid-template-columns:1fr; gap:16px; }
+  #wallet-create { width:100%; }
+  .more-tools summary { padding:10px 8px; }
+}

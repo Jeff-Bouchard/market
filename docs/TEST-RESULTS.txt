@@ -1,0 +1,88 @@
+=== RUN   TestPortalListenPorts
+--- PASS: TestPortalListenPorts (0.02s)
+=== RUN   TestClaimDeadlineAndSignature
+--- PASS: TestClaimDeadlineAndSignature (0.02s)
+=== RUN   TestEveryClaimRequiresFreshWait
+--- PASS: TestEveryClaimRequiresFreshWait (0.02s)
+=== RUN   TestHTTPAndDefault
+--- PASS: TestHTTPAndDefault (0.36s)
+=== RUN   TestPersistenceAndLock
+--- PASS: TestPersistenceAndLock (0.02s)
+=== RUN   TestNVSDefaultPriceAndReplay
+--- PASS: TestNVSDefaultPriceAndReplay (0.10s)
+=== RUN   TestUncertainPaymentNotRetried
+--- PASS: TestUncertainPaymentNotRetried (0.02s)
+=== RUN   TestEmercoinWalletRouting
+=== RUN   TestEmercoinWalletRouting/emc25-kaisen.dat
+=== RUN   TestEmercoinWalletRouting/#00
+=== RUN   TestEmercoinWalletRouting/folder/wallet_#é.dat
+=== RUN   TestEmercoinWalletRouting/auto0
+=== RUN   TestEmercoinWalletRouting/auto1
+=== RUN   TestEmercoinWalletRouting/auto2
+--- PASS: TestEmercoinWalletRouting (0.11s)
+    --- PASS: TestEmercoinWalletRouting/emc25-kaisen.dat (0.03s)
+    --- PASS: TestEmercoinWalletRouting/#00 (0.03s)
+    --- PASS: TestEmercoinWalletRouting/folder/wallet_#é.dat (0.02s)
+    --- PASS: TestEmercoinWalletRouting/auto0 (0.02s)
+    --- PASS: TestEmercoinWalletRouting/auto1 (0.01s)
+    --- PASS: TestEmercoinWalletRouting/auto2 (0.01s)
+=== RUN   TestEMCWalletReadinessAndNameErrors
+--- PASS: TestEMCWalletReadinessAndNameErrors (0.03s)
+=== RUN   TestDirectExchangeQuote
+--- PASS: TestDirectExchangeQuote (0.00s)
+=== RUN   TestDirectExchangeLifecycle
+=== RUN   TestDirectExchangeLifecycle/paid
+=== RUN   TestDirectExchangeLifecycle/uncertain
+=== RUN   TestDirectExchangeLifecycle/overpaid
+=== RUN   TestDirectExchangeLifecycle/cancel
+--- PASS: TestDirectExchangeLifecycle (0.23s)
+    --- PASS: TestDirectExchangeLifecycle/paid (0.08s)
+    --- PASS: TestDirectExchangeLifecycle/uncertain (0.06s)
+    --- PASS: TestDirectExchangeLifecycle/overpaid (0.07s)
+    --- PASS: TestDirectExchangeLifecycle/cancel (0.03s)
+=== RUN   TestDepositsAndLiquidityProtected
+--- PASS: TestDepositsAndLiquidityProtected (0.02s)
+=== RUN   TestHelpfulStatusResponses
+--- PASS: TestHelpfulStatusResponses (0.00s)
+=== RUN   TestHostRebindingRejected
+--- PASS: TestHostRebindingRejected (0.03s)
+=== RUN   TestNESSBurnFactor20
+--- PASS: TestNESSBurnFactor20 (0.00s)
+=== RUN   TestExactAmounts
+--- PASS: TestExactAmounts (0.00s)
+=== RUN   TestAddressChecks
+--- PASS: TestAddressChecks (0.00s)
+=== RUN   TestUpstreamGoldenContracts
+--- PASS: TestUpstreamGoldenContracts (0.00s)
+=== RUN   TestTransactionValidation
+--- PASS: TestTransactionValidation (0.01s)
+=== RUN   TestWalletContractsAndNoDuplicateBroadcast
+=== RUN   TestWalletContractsAndNoDuplicateBroadcast/csrfDisabled=false/uncertain=false
+=== RUN   TestWalletContractsAndNoDuplicateBroadcast/csrfDisabled=false/uncertain=true
+=== RUN   TestWalletContractsAndNoDuplicateBroadcast/csrfDisabled=true/uncertain=false
+=== RUN   TestWalletContractsAndNoDuplicateBroadcast/csrfDisabled=true/uncertain=true
+--- PASS: TestWalletContractsAndNoDuplicateBroadcast (0.23s)
+    --- PASS: TestWalletContractsAndNoDuplicateBroadcast/csrfDisabled=false/uncertain=false (0.15s)
+    --- PASS: TestWalletContractsAndNoDuplicateBroadcast/csrfDisabled=false/uncertain=true (0.04s)
+    --- PASS: TestWalletContractsAndNoDuplicateBroadcast/csrfDisabled=true/uncertain=false (0.02s)
+    --- PASS: TestWalletContractsAndNoDuplicateBroadcast/csrfDisabled=true/uncertain=true (0.02s)
+=== RUN   TestNodeMismatchDoesNotConsumeToken
+--- PASS: TestNodeMismatchDoesNotConsumeToken (0.02s)
+=== RUN   TestNodeFeePrecisionAndLegacyHealth
+=== RUN   TestNodeFeePrecisionAndLegacyHealth/NESS-current
+=== RUN   TestNodeFeePrecisionAndLegacyHealth/NESS-legacy-health
+=== RUN   TestNodeFeePrecisionAndLegacyHealth/stock-Skycoin-fee
+=== RUN   TestNodeFeePrecisionAndLegacyHealth/stock-Skycoin-precision
+=== RUN   TestNodeFeePrecisionAndLegacyHealth/wrong-key
+--- PASS: TestNodeFeePrecisionAndLegacyHealth (0.09s)
+    --- PASS: TestNodeFeePrecisionAndLegacyHealth/NESS-current (0.02s)
+    --- PASS: TestNodeFeePrecisionAndLegacyHealth/NESS-legacy-health (0.02s)
+    --- PASS: TestNodeFeePrecisionAndLegacyHealth/stock-Skycoin-fee (0.02s)
+    --- PASS: TestNodeFeePrecisionAndLegacyHealth/stock-Skycoin-precision (0.02s)
+    --- PASS: TestNodeFeePrecisionAndLegacyHealth/wrong-key (0.01s)
+=== RUN   TestMixedNodePolicyExplainsFixBeforeWalletWrite
+--- PASS: TestMixedNodePolicyExplainsFixBeforeWalletWrite (0.02s)
+=== RUN   TestPaidUnitsAndUnderpayment
+--- PASS: TestPaidUnitsAndUnderpayment (0.03s)
+PASS
+ok  	privateness/faucet-nvs	3.065s

@@ -1,0 +1,205 @@
+[
+  {
+    "repository": "ness-network/ness",
+    "commit": "9dd55e9ee8fec7de9e195cce7d8c98fb922ae648",
+    "path": "fiber.toml",
+    "sha256": "498b390d597bc7408c09e4ebdc3056a1abfe52dd21cf17a818f8c47aa20910c9",
+    "url": "https://github.com/ness-network/ness/blob/9dd55e9ee8fec7de9e195cce7d8c98fb922ae648/fiber.toml"
+  },
+  {
+    "repository": "ness-network/ness",
+    "commit": "9dd55e9ee8fec7de9e195cce7d8c98fb922ae648",
+    "path": "src/api/wallet.go",
+    "sha256": "fea208613fa60d238d8c1d51673f95e845f3dbf13c569180d2be5bc47dd7e2e0",
+    "url": "https://github.com/ness-network/ness/blob/9dd55e9ee8fec7de9e195cce7d8c98fb922ae648/src/api/wallet.go"
+  },
+  {
+    "repository": "ness-network/ness",
+    "commit": "9dd55e9ee8fec7de9e195cce7d8c98fb922ae648",
+    "path": "src/api/health.go",
+    "sha256": "ef6d5139cb4e98107c27607589026c1f8dc4e04cf644b8cb2f65c624b96e68f1",
+    "url": "https://github.com/ness-network/ness/blob/9dd55e9ee8fec7de9e195cce7d8c98fb922ae648/src/api/health.go"
+  },
+  {
+    "repository": "ness-network/ness",
+    "commit": "9dd55e9ee8fec7de9e195cce7d8c98fb922ae648",
+    "path": "src/api/csrf.go",
+    "sha256": "acffe7bc51d262ec4cd74221f665977672ee5ec586f5af5e08af6e2188021f44",
+    "url": "https://github.com/ness-network/ness/blob/9dd55e9ee8fec7de9e195cce7d8c98fb922ae648/src/api/csrf.go"
+  },
+  {
+    "repository": "ness-network/ness",
+    "commit": "9dd55e9ee8fec7de9e195cce7d8c98fb922ae648",
+    "path": "src/api/transaction.go",
+    "sha256": "84876c32fbde97a218dae0e2d329bfcc781cad4c3cd6912ab72467f7b76dfcd0",
+    "url": "https://github.com/ness-network/ness/blob/9dd55e9ee8fec7de9e195cce7d8c98fb922ae648/src/api/transaction.go"
+  },
+  {
+    "repository": "ness-network/ness",
+    "commit": "9dd55e9ee8fec7de9e195cce7d8c98fb922ae648",
+    "path": "src/util/fee/fee.go",
+    "sha256": "eebd78793a54fb15d3b8b4d486b322a7a6d453b86753158cf364dc24d1d80cbd",
+    "url": "https://github.com/ness-network/ness/blob/9dd55e9ee8fec7de9e195cce7d8c98fb922ae648/src/util/fee/fee.go"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "go.mod",
+    "sha256": "b1c3aa73e7558799c2d81222b519bf5fc3b7887186190671b274f584fd1b7ac8",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/go.mod"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "FIBERCOIN-CONFIG.md",
+    "sha256": "813b6a4ddc54d894e9a1ed3b75cf463a30b1ef145242173de3b9f1fdf3f5e1d4",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/FIBERCOIN-CONFIG.md"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "src/api/http.go",
+    "sha256": "9ad0a3ef495e0efd83953d417c473f6b241e504dadc7d149261d5c09232b4927",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/src/api/http.go"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "src/api/client.go",
+    "sha256": "bf624d32f514c1088f0ab21e0fabbea024dd2564a34ba0210eaafc988b02e0e0",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/src/api/client.go"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "src/api/middleware.go",
+    "sha256": "8f2132eb0740611d02e14b7066d5104e171abd0efb013cafd951e7fd8b99d3d6",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/src/api/middleware.go"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "src/api/wallet.go",
+    "sha256": "c1a1767f209765af13f4ccb84292845d34944b113a2afa4cb86cb12f979ec244",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/src/api/wallet.go"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "src/api/spend.go",
+    "sha256": "3649e3fad139007bb439453bbbf1ee3ebc32b0ba883c146f3bfd591c083fb001",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/src/api/spend.go"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "src/api/transaction.go",
+    "sha256": "149b8fdb7a6b80c24241b70b5902a58337cc9b6ec420d66187abfeed87e03b4b",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/src/api/transaction.go"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "src/api/health.go",
+    "sha256": "23d7d68f1641cb2cfa835237d3c2caf138c5e056e4130e224a677ea17cbc600e",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/src/api/health.go"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "src/api/csrf.go",
+    "sha256": "47e1996360b413df241e67d2dd32694b957d402ae5614cbb28806f480b9db3db",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/src/api/csrf.go"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "src/readable/wallet.go",
+    "sha256": "6b6cd3ae2a9b1d6936047a701b232cb762a8c158cdd4d11d5d467b077daecda5",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/src/readable/wallet.go"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "src/readable/block.go",
+    "sha256": "f2175dff0984d06bd15ca30a6f0d30f84f62be9735afafb3fc300f632e54d23b",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/src/readable/block.go"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "src/readable/fiber.go",
+    "sha256": "762f11f07f643315b5405d7a092d1f0550b9fcfdf4865a23648c3c0e2e46843d",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/src/readable/fiber.go"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "src/cipher/address.go",
+    "sha256": "2a1d90893f6ee372a8bc2754f510024440e74d5bdd45ded9f78906efc7f04943",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/src/cipher/address.go"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "src/coin/transactions.go",
+    "sha256": "608b77b263f436f901517ab87f6d528ae0207442c1d5e90e97ba3472999554b3",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/src/coin/transactions.go"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "src/coin/transaction_skyencoder.go",
+    "sha256": "85200ecf9d1d75f8346199abf563a3f14f19252074613107ae9c89b6af1192b6",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/src/coin/transaction_skyencoder.go"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "src/util/droplet/droplet.go",
+    "sha256": "2ac58f0aa1dcd963d08b82e2e2c821461b150383ef2a9838be0764d8072b8b2c",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/src/util/droplet/droplet.go"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "src/util/fee/fee.go",
+    "sha256": "eebd78793a54fb15d3b8b4d486b322a7a6d453b86753158cf364dc24d1d80cbd",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/src/util/fee/fee.go"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "src/transaction/create.go",
+    "sha256": "4ccd6deee550c961acbbc1712ab8f2501002007759123225d7134f71bdc9448b",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/src/transaction/create.go"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "src/skycoin/config.go",
+    "sha256": "b2330ba8dfff18ec3d02df6d2941f6cf6d23da589c039a64e59d0e6badf95d8e",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/src/skycoin/config.go"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "src/api/integration/testdata/balance-two-addrs.golden",
+    "sha256": "194f547f8b3ec8b2ca80b6fa795ce9671f3f5b6816bcd500edff3d30b098c327",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/src/api/integration/testdata/balance-two-addrs.golden"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "src/api/integration/testdata/transaction-block-517.golden",
+    "sha256": "f9569e9b34e66860b1d8a2527a0e59299cd13dcabaf05bf43127bf2e1e0bce99",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/src/api/integration/testdata/transaction-block-517.golden"
+  },
+  {
+    "repository": "skycoin/skycoin",
+    "commit": "a5d2f6d2bb395ea0ef5b32264e7d5895833ed668",
+    "path": "src/api/integration/testdata/transaction-encoded.golden",
+    "sha256": "a1ae821ba22d30ed5dc5502a2f3503416b1c3e7ba9a0189aaf8bbd94fa99a6d4",
+    "url": "https://github.com/skycoin/skycoin/blob/a5d2f6d2bb395ea0ef5b32264e7d5895833ed668/src/api/integration/testdata/transaction-encoded.golden"
+  }
+]

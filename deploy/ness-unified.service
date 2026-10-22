@@ -1,0 +1,24 @@
+[Unit]
+Description=PrivateNess unified faucet and NVS
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ness-unified
+Group=ness-unified
+WorkingDirectory=/var/lib/ness-unified
+ExecStart=/opt/ness-unified/ness-unified /etc/ness-unified/config.json
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=130
+StateDirectory=ness-unified
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/ness-unified
+
+[Install]
+WantedBy=multi-user.target

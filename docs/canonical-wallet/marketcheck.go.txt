@@ -1,0 +1,38 @@
+// Test-only harness. Uses a public BIP39 test phrase; never use these keys for funds.
+package main
+import (
+ "encoding/json"
+ "encoding/hex"
+ "fmt"
+ "os"
+ "github.com/ness-network/ness/src/cipher/bip39"
+ "github.com/ness-network/ness/src/cipher/bip32"
+ "github.com/ness-network/ness/src/coin"
+ "github.com/skycoin/skycoin/src/cipher"
+)
+func must(err error) { if err != nil { panic(err) } }
+func main() {
+ phrase := "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"
+ seed, e := bip39.NewSeed(phrase, ""); must(e)
+ key,e := bip32.NewPrivateKeyFromPath(seed,"m/44'/8000'/0'/0/0"); must(e)
+ sec,e := cipher.NewSecKey(key.Key);must(e)
+ addr := cipher.MustAddressFromSecKey(sec)
+ emc,e := bip32.NewPrivateKeyFromPath(seed,"m/0'/0'/0'");must(e)
+ var tx coin.Transaction
+ ux := coin.UxOut{Body:coin.UxBody{SrcTransaction:cipher.SumSHA256([]byte("public test fixture")),Address:addr,Coins:8,Hours:8}}
+ must(tx.PushInput(ux.Hash()))
+ recipient := cipher.MustDecodeBase58Address("2VLXYmAWYnX5MMCfRwAvt46YyEk2X7TvrS9")
+ must(tx.PushOutput(recipient,1,1));must(tx.PushOutput(addr,7,6))
+ tx.Sigs=make([]cipher.Sig,1);must(tx.UpdateHeader());must(tx.VerifyUnsigned())
+ if len(os.Args)>1 {
+  raw,e:=os.ReadFile(os.Args[1]);must(e)
+  var result struct {Rawtx string `json:"rawtx"`};must(json.Unmarshal(raw,&result))
+  wire,e:=hex.DecodeString(result.Rawtx);must(e)
+  signed,e:=coin.DeserializeTransaction(wire);must(e)
+  must(signed.Verify());must(signed.VerifyInputSignatures(coin.UxArray{ux}))
+  if signed.InnerHash!=tx.InnerHash {panic("payment changed")}
+  fmt.Println("Native NESS transaction decoding, validation and input-signature verification passed.")
+  return
+ }
+ json.NewEncoder(os.Stdout).Encode(map[string]interface{}{"phrase":phrase,"address":addr.String(),"emc_test_secret":hex.EncodeToString(emc.Key),"template":map[string]interface{}{"encoded_transaction":tx.MustSerializeHex(),"transaction":map[string]interface{}{"txid":tx.Hash().Hex(),"fee":"1","inputs":[]interface{}{map[string]interface{}{"uxid":ux.Hash().Hex(),"address":addr.String(),"coins":"0.000008","calculated_hours":"8"}},"outputs":[]interface{}{map[string]interface{}{"address":recipient.String(),"coins":"0.000001","hours":"1"},map[string]interface{}{"address":addr.String(),"coins":"0.000007","hours":"6"}}}}})
+}

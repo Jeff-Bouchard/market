@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Build services people pay for. Prepare your PrivateNess access and public records for running services and selling work through agents.">
+<title>PrivateNess — Build services. Get paid.</title>
+<link rel="stylesheet" href="assets/ui/ui.css">
+<link rel="stylesheet" href="assets/css/portal.css">
+<link rel="stylesheet" href="assets/css/unified.css">
+<script defer src="assets/ui/qrcode.js"></script>
+<script defer src="assets/ui/ui.js"></script>
+<script defer src="assets/js/journey.js"></script>
+<script defer src="assets/js/receiving-wallet.js"></script>
+<script defer src="assets/js/portal.js"></script>
+</head>
+<body data-exchange-api="/api/exchange" data-class="voyager">
+<a class="skip-link" href="#content">Skip to content</a>
+<header><a class="brand" href="#faucet"><span class="brand-mark" aria-hidden="true">✳</span><span>PRIVATENESS</span></a><span class="network">RECORDS &amp; SERVICES</span></header>
+<main id="content">
+<nav aria-label="Choose a service">
+<a href="#faucet" data-panel="faucet" aria-current="page">Get started</a>
+<a href="#nvs" data-panel="nvs">Register a record</a>
+<details class="more-tools"><summary>More</summary><a href="#exchange" data-panel="exchange">Exchange hours</a></details>
+</nav>
+<p id="service-availability" class="notice" role="status" hidden></p>
+<noscript><p class="notice">Enable JavaScript in your browser to get started.</p></noscript>
+<section id="faucet" class="panel">
+<div class="intro"><p class="eyebrow">PRIVATENESS · FOR PROVIDERS</p><h1>Build services.<br>Get paid.</h1><p>Run services for customers. Sell work through agents.<br>Start with access and public records you control.</p></div>
+<section class="earning-paths" aria-label="Ways to earn">
+<div><h2>Run paid services</h2><p>Offer services from your node and charge customers who use them.</p></div>
+<div><h2>Sell work through agents</h2><p>Offer a defined job, use agents to deliver it, and charge for the work.</p></div>
+</section>
+<section id="wallet-setup" class="form-surface" aria-labelledby="wallet-heading">
+<p class="eyebrow">SHARED SETUP · ACCESS AND RECORDS</p>
+<h2 id="wallet-heading">Prepare your access.</h2>
+<p id="wallet-intro">Both routes start here. Create your keys on this device, save your private backup, and receive a balance for public registration.</p>
+<button id="wallet-create" type="button">Get started <span aria-hidden="true">→</span></button>
+<details id="wallet-options"><summary>Setup options</summary>
+<label class="checkbox-row"><input type="checkbox" id="wallet-add-emc" checked> Keep control of the records I register</label>
+<p class="small">Uses the same backup. If you turn this off and don’t add your own owner address later, the service will hold your records.</p></details>
+<div id="wallet-backup" hidden>
+<div id="wallet-phrase-box" hidden><p>Your 12 recovery words let you restore your access here. Keep them private: anyone with them can use your balance and control your records.</p>
+<details id="wallet-phrase-details"><summary>Show my 12 recovery words</summary><p id="wallet-phrase" class="recovery-phrase" translate="no"></p></details></div>
+<p id="backup-instruction">Download your backup and keep it somewhere safe. We cannot recover it for you.</p>
+<button id="wallet-save" type="button">Save my backup</button>
+<button id="wallet-saved" type="button" hidden>I’ve saved it — continue</button>
+<details class="technical-details"><summary>Addresses and other wallet apps</summary>
+<p>NESS receiving address</p><code id="wallet-address" class="receiving-address"></code>
+<p id="emc-wallet-address" class="receiving-address" hidden></p>
+<button id="emc-wallet-export" type="button" class="secondary" hidden>Save Emercoin key for Core</button>
+<p id="emc-wallet-help" class="small" hidden>Restore both wallets here with your 12 words. Emercoin Core uses the exported private key instead of the words.</p>
+</details>
+</div>
+<p id="wallet-status" role="status" aria-live="polite"></p>
+<details id="wallet-selected-row" hidden><summary>Selected receiving address</summary><code id="wallet-selected" class="receiving-address"></code></details>
+<details id="restore-access"><summary>I’m returning</summary>
+<label for="wallet-recovery">12 recovery words saved from this site</label><textarea id="wallet-recovery" rows="3" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="240" aria-describedby="recovery-help"></textarea>
+<p id="recovery-help" class="small">Paste all 12 words from your private backup, in their original order, with a space between each word. Use your own words, never an example found online.</p>
+<button id="wallet-restore" type="button" class="secondary">Restore my access</button>
+<label for="wallet-existing-address">Your NESS receiving address</label>
+<input id="wallet-existing-address" autocomplete="off" spellcheck="false" maxlength="35" placeholder="Paste your receiving address" aria-describedby="existing-address-help">
+<p id="existing-address-help" class="small">Using another NESS wallet? Copy its Receive address here. If you started here, we fill in your address for you. An address lets you receive; your private backup is needed to spend.</p>
+<button id="wallet-use-existing" type="button" class="secondary">Use this address</button>
+<label for="wallet-open">Or open the backup you saved here</label>
+<input id="wallet-open" type="file" accept=".wlt,.json,application/json">
+<p class="small">Choose the .wlt backup you downloaded from this site. The file stays on your device.</p>
+</details>
+</section>
+<div id="faucet-claim" hidden>
+<section class="form-surface countdown-card" id="forge-stage" aria-labelledby="countdown-heading">
+<div><p class="eyebrow">SETUP PROGRESS</p><h2 id="countdown-heading">Access and balance.</h2><p id="phase-detail">Save your access, then collect your starting balance.</p></div>
+<div class="simple-countdown" aria-hidden="true"><strong id="count">0</strong><span id="count-label">seconds</span></div>
+<progress id="progress" max="8" value="0" aria-label="Claim preparation"></progress>
+<ol class="operation-list" aria-label="Completed steps">
+<li id="op-wallet">Create your access</li><li id="op-emc">Set up control of your records</li><li id="op-claim">Prepare your claim</li><li id="op-receive">Receive your starting balance</li><li id="op-record">Register your record</li>
+</ol>
+<div id="claim-status" role="status" aria-live="polite">Choose Prepare my balance to begin.</div>
+<button id="start" class="primary-wide">Prepare my balance</button>
+<button id="use-token" disabled>Continue to my balance</button>
+<details class="token-pocket"><summary>Save this claim for later</summary>
+<label for="new-token">Your claim code</label><textarea autocomplete="off" id="new-token" rows="3" readonly disabled spellcheck="false"></textarea>
+<p class="small">Keep it private. You can paste it here later to collect.</p>
+<button id="copy" type="button" class="secondary" disabled>Copy claim code</button>
+</details>
+<button id="new-claim" class="text-button" hidden>Start another claim</button>
+</section>
+</div>
+<p><a class="inline-link" href="#cashout">Use a saved claim</a></p>
+<details class="foundation"><summary>About PrivateNess</summary>
+<p>NESS is a Skycoin fork. Its coin hours, NCH, grow with NESS holdings and pay for services. PrivateNess uses Emercoin for public names and identity records, with Bitcoin merged mining in Emercoin’s proof-of-work lineage.</p>
+<p><a href="https://github.com/NESS-Network/PrivatenessTools#initialization" target="_blank" rel="noopener noreferrer">PrivateNess records</a> · <a href="https://github.com/emercoin/emercoin/blob/master/src/pow.cpp" target="_blank" rel="noopener noreferrer">Emercoin’s merged-mining verification</a></p>
+</details>
+</section>
+<section id="cashout" class="panel" hidden>
+<div class="intro"><p class="eyebrow">YOUR STARTING BALANCE</p><h1>Receive your balance.</h1><p>Collect your balance here, then use its hours to register a record.</p></div>
+<form id="cashout-form" class="form-surface">
+<p id="cash-destination">Your saved access will receive this balance.</p>
+<details id="cash-details" open><summary>Claim and receiving details</summary>
+<label for="cash-token">Your claim code</label><textarea id="cash-token" name="token" rows="3" required maxlength="160" spellcheck="false" autocomplete="off" placeholder="Paste your saved claim code" aria-describedby="claim-help"></textarea>
+<p id="claim-help" class="small">Paste the whole code from “Save this claim for later.” Coming straight from Get started? We fill it in for you.</p>
+<button id="cash-create-wallet" type="button" class="secondary">Create my access first</button>
+<label for="cash-address">Your NESS receiving address</label><input id="cash-address" name="address" required maxlength="64" autocomplete="off" spellcheck="false" placeholder="Your NESS receiving address" data-wallet="NESS" aria-describedby="cash-address-help">
+<p id="cash-address-help" class="small">Your generated address is filled in automatically. To receive elsewhere, copy the Receive address from a NESS wallet you control.</p>
+</details>
+<button id="quote" type="button" class="secondary">Check amount</button>
+<div id="quote-result" class="notice" hidden></div>
+<button id="withdraw" type="submit" disabled>Receive my balance</button>
+<div id="cash-status" role="status" aria-live="polite"></div>
+<a id="continue-nvs" class="inline-link" href="#nvs" hidden>Register my record →</a>
+</form>
+<p><a class="inline-link" href="#faucet">Back to my access</a></p>
+</section>
+<section id="nvs" class="panel" hidden>
+<div class="intro"><p class="eyebrow">PUBLIC RECORDS</p><h1>Register a record.</h1><p>Publish the information a domain, identity or service uses.<br>Review its content, owner and cost before confirming.</p></div>
+<form id="nvs-form" class="form-surface">
+<label for="nvs-name">Record name</label><input id="nvs-name" name="name" required maxlength="512" spellcheck="false" autocapitalize="off" autocomplete="off" placeholder="dns:myname.emc" aria-describedby="name-help">
+<p id="name-help" class="small">Example: <code>dns:myname.emc</code>. Replace <code>myname</code> with the name you want. We check whether it is already registered when you continue.</p>
+<details class="field-help"><summary>How to write a record name</summary><p class="small">Use the name required by your service. For an EmerDNS domain, use <code>dns:</code> followed by the domain, for example <code>dns:myname.emc</code>. Registering a name does not create or host a website.</p></details>
+<label for="nvs-value">Information to publish</label><textarea id="nvs-value" name="value" rows="3" required maxlength="10240" aria-describedby="nameserver-help public-help" spellcheck="false">NS=seed1.emercoin.com,seed2.emercoin.com</textarea>
+<p id="nameserver-help" class="small">For a domain name, you can keep these nameservers. This is a valid entry, ready to use. If your service supplies different settings, paste them here.</p>
+<p id="public-help" class="small">This information will be public, and copies can remain after the registration expires. Don’t include passwords or private recovery words.</p>
+<label for="nvs-days">How many days?</label><input id="nvs-days" name="days" type="number" min="100" max="3650" required value="100" aria-describedby="days-help">
+<p id="days-help" class="small">100 days is filled in to get you started. Choose between 100 and 3,650 days. You’ll see the price for your choice before paying.</p>
+<button id="nvs-create-emc" type="button" class="secondary">Set up my control of this record</button>
+<p id="nvs-wallet-status" role="status">The service will hold this record unless you set up your own control.</p>
+<details><summary>Use another owner address</summary>
+<label for="nvs-owner">Your Emercoin address (optional)</label><input id="nvs-owner" name="owner" maxlength="64" spellcheck="false" placeholder="Your Emercoin receiving address" data-wallet="EMC" aria-describedby="owner-help">
+<p id="owner-help" class="small">We fill this in when you set up control here. To use an existing Emercoin wallet instead, copy its Receive address. Only use an address whose private key you hold; leaving it blank gives the service control.</p>
+</details>
+<button type="submit">Review my record and cost</button><div id="nvs-status" role="status" aria-live="polite"></div>
+</form><div id="nvs-slot" class="slot" hidden></div>
+</section>
+<section id="exchange" class="panel" hidden>
+<div class="intro"><p class="eyebrow">COIN HOURS</p><h1>Turn hours into NESS.</h1><p>Use the coin hours already in your NESS wallet.</p></div>
+<form id="exchange-form" class="form-surface">
+<label for="exchange-hours">Coin hours to exchange</label><input id="exchange-hours" name="hours" type="number" min="1" step="1" value="10000" required aria-describedby="exchange-help">
+<p id="exchange-help" class="small">Example: 10,000 hours gives 1 NESS. Enter a whole number of hours you already have available.</p>
+<p id="exchange-quote" class="notice" aria-live="polite">You receive 1.000000 NESS.</p>
+<label for="pay-address">Your NESS receiving address</label><input id="pay-address" name="pay_address" required maxlength="64" autocomplete="off" spellcheck="false" placeholder="Your NESS receiving address" data-wallet="NESS">
+<p class="small">Copy the Receive address from your NESS wallet. This is where your NESS will arrive. You’ll get the separate payment address and exact instructions next.</p>
+<button type="submit">Continue</button><div id="exchange-status" role="status" aria-live="polite"></div>
+</form><div id="exchange-slot" class="slot" hidden></div>
+</section>
+<footer><span>PRIVATENESS</span><span>Built for an open Internet.</span></footer>
+</main>
+</body>
+</html>
